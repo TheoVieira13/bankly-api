@@ -74,6 +74,24 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<profiles>
+		<profile>
+			<id>test</id>
+			<properties>
+				<activedProperties>dev</activedProperties>
+			</properties>
+			<activation>
+				<activeByDefault>dev</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<activedProperties>prod</activedProperties>
+			</properties>
+		</profile>
+	</profiles>
 
 	<build>
 		<plugins>
