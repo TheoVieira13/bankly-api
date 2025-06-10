@@ -1,8 +1,15 @@
 package br.com.theo.bankly.dto;
 
 import br.com.theo.bankly.model.Cliente;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 
-public record ClienteDTO (String nome,String email, String cpf, String telefone, String senha) {
+public record ClienteDTO (@NotNull String nome,
+		                  @NotNull @Email String email,
+		                  @NotNull String cpf,
+		                  @NotNull @Min(11) String telefone,
+		                  @NotNull @Min(8) String senha) {
 	public Cliente toCliente() {
 		Cliente cliente = new Cliente();
 		cliente.setCpf(cpf);
