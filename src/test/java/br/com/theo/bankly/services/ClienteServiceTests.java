@@ -1,4 +1,4 @@
-package br.com.theo.bankly.cliente.service;
+package br.com.theo.bankly.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -70,7 +70,7 @@ public class ClienteServiceTests {
 	
 	@Test
 	public void deveRejeitarClienteTelefoneDuplicado() {
-		assertEquals(service.alterarDados(reqTelDupl), null);
+		assertEquals(service.cadastrarCliente(reqTelDupl), null);
 	}
 	
 }

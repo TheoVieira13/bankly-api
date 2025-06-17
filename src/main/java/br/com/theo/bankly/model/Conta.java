@@ -80,4 +80,10 @@ public class Conta {
 		this.cliente = cliente;
 	}
 	
+	@Override
+	public String toString() {
+		return "Conta [numeroConta=" + numeroConta + ", numeroBanco=" + numeroBanco + ", numeroAgencia=" + numeroAgencia
+				+ ", saldo=" + saldo + ", limite=" + limite + ", ativa=" + ativa + ", cliente=" + cliente + "]";
+	}
+	
 }

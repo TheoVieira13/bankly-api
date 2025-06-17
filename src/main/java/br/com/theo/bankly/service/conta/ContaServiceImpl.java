@@ -3,6 +3,7 @@ package br.com.theo.bankly.service.conta;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import br.com.theo.bankly.dto.ContaDTO;
@@ -14,6 +15,9 @@ import br.com.theo.bankly.repository.ContaRepository;
 @Service
 public class ContaServiceImpl implements IContaService{
 
+	@Value("${bankly.banknumber}")
+	private Integer numeroBanco;
+	
 	@Autowired
 	private ContaRepository contaRepository;
 	
@@ -23,10 +27,15 @@ public class ContaServiceImpl implements IContaService{
 	@Override
 	public Integer cadastrarNovaConta(ContaDTO nova) {
 		// TODO Auto-generated method stub
+
 		Cliente cliente = clienteRepository.findById(nova.idCliente()).orElse(null);
 		if (cliente == null) {
 			return null;
 		}
+		Conta conta = nova.toConta();
+		conta.setNumeroBanco(numeroBanco);
+		//System.out.println(conta);
+		
 		return contaRepository.save(nova.toConta()).getNumeroConta();
 	}
 

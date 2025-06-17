@@ -1,4 +1,4 @@
-package br.com.theo.bankly.cliente.service;
+package br.com.theo.bankly.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
