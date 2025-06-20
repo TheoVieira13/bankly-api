@@ -26,8 +26,8 @@ public class ContaServiceTests {
 	@BeforeEach
 	public void setup() {
 		
-		contaValida = new ContaDTO(1, 1, 100.0, 0.0, 10);
-		contaInvalida = new ContaDTO(1, 1, 100.0, 0.0, 2);
+		contaValida   = new ContaDTO(1, 1, 100.0, 0.0, 10);
+		contaInvalida = new ContaDTO(1, 1, 100.0, 0.0, 3);
 		
 		/*
 		Mockito.when(contaService.cadastrarNovaConta(contaValida)).thenReturn(1);

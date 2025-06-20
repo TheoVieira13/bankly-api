@@ -53,9 +53,9 @@ public class TransacaoServiceTests {
 		transfDestinoInvalida   = new TransferenciaDTO(10, 100, LocalDateTime.parse("2025-09-11T21:00:00"), 100.00, "Manda o PIX");
 		transfSaldoInsuficiente = new TransferenciaDTO(10, 20, LocalDateTime.parse("2025-09-11T21:00:00"), 1000000.00, "Manda o PIX");
 		
-		extratoValido = new ExtratoDTO(10, LocalDateTime.parse("2025-01-01T00:00:00"), LocalDateTime.parse("2025-09-11T23:59:59"));
-		extratoContaInvalida = new ExtratoDTO(100, LocalDateTime.parse("2025-01-01T00:00:00"), LocalDateTime.parse("2025-09-11T23:59:59"));
-		extratoDatasInvalidas = new ExtratoDTO(10, LocalDateTime.parse("2025-09-11T23:59:59"), LocalDateTime.parse("2025-01-01T00:00:00"));
+		extratoValido           = new ExtratoDTO(10, LocalDateTime.parse("2025-01-01T00:00:00"), LocalDateTime.parse("2025-09-11T23:59:59"));
+		extratoContaInvalida    = new ExtratoDTO(100, LocalDateTime.parse("2025-01-01T00:00:00"), LocalDateTime.parse("2025-09-11T23:59:59"));
+		extratoDatasInvalidas   = new ExtratoDTO(10, LocalDateTime.parse("2025-09-11T23:59:59"), LocalDateTime.parse("2025-01-01T00:00:00"));
 		
 		/*
 		Mockito.when(service.efetuarPagamento(pagamentoValido)).thenReturn(true);

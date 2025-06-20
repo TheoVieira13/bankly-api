@@ -16,7 +16,7 @@ import br.com.theo.bankly.repository.ContaRepository;
 public class ContaServiceImpl implements IContaService{
 
 	@Value("${bankly.banknumber}")
-	private Integer numeroBanco;
+	private Integer numeroBanco = 12345;
 	
 	@Autowired
 	private ContaRepository contaRepository;

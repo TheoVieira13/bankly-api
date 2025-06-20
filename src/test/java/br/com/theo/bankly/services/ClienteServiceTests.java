@@ -29,12 +29,12 @@ public class ClienteServiceTests {
 	
 	@BeforeEach
 	public void setup() {
-		reqValida = new ClienteDTO("Cliente Valido", "cliente@email.com", "01234567890", "11852741963", "abc12345");
+		reqValida    = new ClienteDTO("Cliente Valido", "cliente@email.com", "01234567890", "11852741963", "abc12345");
 		reqEmailDupl = new ClienteDTO("Cliente email duplicado", "email@email.com", "12345678009", "11123456789", "abc12345");
-		reqCpfDupl = new ClienteDTO("Cliente cpf duplicado", "email@outroemail.com", "12345678900", "987584126", "abc12345");
-		reqTelDupl = new ClienteDTO("Cliente tel duplicado", "email@novoemail.com", "12378945600", "11987654321", "abc12345");
+		reqCpfDupl   = new ClienteDTO("Cliente cpf duplicado", "email@outroemail.com", "12345678900", "987584126", "abc12345");
+		reqTelDupl   = new ClienteDTO("Cliente tel duplicado", "email@novoemail.com", "12378945600", "11987654321", "abc12345");
 		
-		reqInvalida = new ClienteDTO("Cliente Invalido", null, null, null, null);
+		reqInvalida  = new ClienteDTO("Cliente Invalido", null, null, null, null);
 		idValido = 1;
 		
 		/*
